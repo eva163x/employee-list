@@ -1,15 +1,18 @@
 import './App.css';
-import ListEmployeesComponent from './components/ListEmployeesComponent';'./components/ListEmployeesComponent';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import AddEmployeeComponent from './components/AddEmployeeComponent';
+import ListEmployeesComponent from './components/ListEmployeesComponent';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
     <Router>
       <div className="container">
-        <Switch>
-          <Route path="/" Component={ListEmployeesComponent} />
-          <Route exact path="/employees" Component={ListEmployeesComponent} />
-        </Switch>
+        <Routes>
+          <Route path="/" element={<ListEmployeesComponent />} />
+          <Route path="/employees" element={<ListEmployeesComponent />} />
+          <Route path="/add-employee" element={<AddEmployeeComponent />} />
+          <Route path="/edit-employee/:id" element={<AddEmployeeComponent />} />
+        </Routes>
       </div>
     </Router>
   );
