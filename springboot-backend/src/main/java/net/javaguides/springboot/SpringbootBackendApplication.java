@@ -19,7 +19,7 @@ public class SpringbootBackendApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		Employee employee = new Employee();
+		/* Employee employee = new Employee();
 		employee.setFirstName("Eva");
 		employee.setLastName("Aggarwal");
 		employee.setEmailID("eva.aggarwal@duke.edu");
@@ -30,5 +30,8 @@ public class SpringbootBackendApplication implements CommandLineRunner {
 		employee1.setLastName("Stitch");
 		employee1.setEmailID("lilostitch@gmail.com");
 		employeeRepository.save(employee1); //saves to database & repo
+
+
+		 */
 	}
 }
